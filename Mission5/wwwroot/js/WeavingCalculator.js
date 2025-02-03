@@ -2,9 +2,11 @@
 // Set up 2nd page 
 $(document).ready(function () {
     // Handle calculate button click
-    $('#calculateButton').click(function () {
+    $('#calculateBtn').click(function () {
         // Get the number of hours from input
-        var hours = $('#hours').val();
+        var hours = parseFloat($('#hours').val());
+        var hourlyRate = parseFloat($('#rate').val());
+
 
         // Ensure hours is a positive number
         if (hours <= 0 || isNaN(hours)) {
@@ -13,7 +15,7 @@ $(document).ready(function () {
         }
 
         // Get the hourly rate (hardcoded as 50 in this case)
-        var hourlyRate = $('#hourlyRate').val();
+        var hourlyRate = $('#rate').val();
 
         // Calculate the total price
         var totalPrice = hours * hourlyRate;
@@ -22,15 +24,4 @@ $(document).ready(function () {
         $('#totalPrice').text(totalPrice); // Rounded to 2 decimal places
     });
 });
-
-
-//<form>
-//    <label>Name</label>
-//    <input id="txtName" />
-//    <label>Hours Needed?</label>
-//    <input id="txtHours" />
-//    <textarea rows="4"></textarea>
-//    <br />
-//    <input type="button" value="Calculate Price" id="btnSubmit" />
-//</form>
 
