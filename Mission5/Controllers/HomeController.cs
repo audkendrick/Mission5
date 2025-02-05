@@ -2,6 +2,8 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Mission5.Models;
 
+/* Create actions/routes for each view */
+
 namespace Mission5.Controllers
 {
     public class HomeController : Controller

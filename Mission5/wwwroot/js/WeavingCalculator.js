@@ -1,8 +1,10 @@
 ﻿
-// Set up 2nd page 
+// Set up Calculator page 
 $(document).ready(function () {
+
     // Handle calculate button click
     $('#calculateBtn').click(function () {
+
         // Get the number of hours from input
         var hours = parseFloat($('#hours').val());
         var hourlyRate = parseFloat($('#rate').val());
@@ -14,7 +16,7 @@ $(document).ready(function () {
             return;
         }
 
-        // Get the hourly rate (hardcoded as 50 in this case)
+        // Get the hourly rate (hardcoded as 25 in this case)
         var hourlyRate = $('#rate').val();
 
         // Calculate the total price
